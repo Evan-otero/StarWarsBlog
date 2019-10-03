@@ -2,8 +2,9 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 
-import { InfoNav } from "./js/component/InfoNav.js";
-import { Card } from "./src/js/component/Card.js";
+import { InfoNav } from "../component/Infonav.js";
+import { Card } from "../component/Card.js";
+import { Details } from "../views/Details.js";
 
 export class Home extends React.Component {
 	constructor() {

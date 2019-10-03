@@ -1,5 +1,6 @@
 import React from "react";
 import Proptypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export const Card = props => {
 	return (
@@ -20,7 +21,9 @@ export const Card = props => {
 						{props.papa}
 						<br />
 					</h7>
-					<button>Save for Later</button>
+					<Link to="/details">
+						<button>Go to Details</button>
+					</Link>{" "}
 				</div>
 			</div>
 		</div>

@@ -39,8 +39,11 @@ export class Navbar extends React.Component {
 						<div className="navbar">
 							<div className="navbaritems">
 								<ul style={{ display: "flex" }}>
-									<li className="navbarli">News + Blog</li>;<li className="navbarli">Video</li>;
-									<li className="navbarli">Films</li>;<li className="navbarli">Series</li>;
+									<li className="navbarli">Home</li>;
+									<Link to="/details">
+										<li className="navbarli">Details</li>
+									</Link>
+									;<li className="navbarli">Films</li>;<li className="navbarli">Series</li>;
 									<li className="navbarli">Interactive</li>;<li className="navbarli">Community</li>;
 									<li className="navbarli">Databank</li>;
 								</ul>
