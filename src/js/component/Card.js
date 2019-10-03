@@ -6,24 +6,20 @@ export const Card = props => {
 	return (
 		<div className="col-md-3">
 			<div className="card">
-				<img className="card-img-top" src="..." alt="Card image cap" />
+				<img
+					className="card-img-top"
+					src="https://media.wired.com/photos/5bb3fffc2b915f2dff96d696/master/pass/chewbacca-971316060.jpg"
+					alt="Card image cap"
+				/>{" "}
 				<div className="card-body">
 					<h5 className="card-title">
 						{props.november}
 						<br />
 						{props.echo}
 					</h5>
-					<h7>
-						{props.oscar}
-						<br />
-						{props.mike}
-						<br />
-						{props.papa}
-						<br />
-					</h7>
-					<Link to="/details">
-						<button>Go to Details</button>
-					</Link>{" "}
+					<Link to={"/details"}>
+						<button>Details</button>
+					</Link>
 				</div>
 			</div>
 		</div>

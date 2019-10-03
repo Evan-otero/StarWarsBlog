@@ -5,7 +5,7 @@ import "../../styles/home.scss";
 import { InfoNav } from "../component/Infonav.js";
 import { Card } from "../component/Card.js";
 import { Details } from "../views/Details.js";
-
+import { Link } from "react-router-dom";
 export class Home extends React.Component {
 	constructor() {
 		super();
@@ -59,29 +59,12 @@ export class Home extends React.Component {
 							<div className="col-md-10">
 								<div className="row">
 									{this.state.delta.map((foxtrot, golf) => {
-										return (
-											<Card
-												echo={this.state.delta[golf].name}
-												mike={this.state.delta[golf].height}
-												november="Name:"
-												oscar="Height:"
-												papa="cm"
-												key={golf}
-											/>
-										);
+										return <Card echo={this.state.delta[golf].name} november="Name:" key={golf} />;
 									})}
 								</div>
 								<div className="row">
 									{this.state.delta.map((kilo, lima) => {
-										return (
-											<Card
-												echo={this.state.juliet[lima].name}
-												mike={this.state.juliet[lima].population}
-												november="Name:"
-												oscar="Population:"
-												key={lima}
-											/>
-										);
+										return <Card echo={this.state.juliet[lima].name} november="Name:" key={lima} />;
 									})}
 								</div>
 							</div>

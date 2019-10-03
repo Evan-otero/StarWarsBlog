@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<nav className="navbar navbar-light bg-light mb-3">
+			<nav className="navbar">
 				<div className="header container-fluid">
 					<div className="headertop row">
 						<div className="socialmedialinks col-md-3">
@@ -35,11 +35,14 @@ export class Navbar extends React.Component {
 							<div className="login">Log In // Sign Up </div>
 						</div>
 					</div>
-					<div>
-						<div className="navbar">
+					<div className="navdiv">
+						<div className="nbar">
 							<div className="navbaritems">
 								<ul style={{ display: "flex" }}>
-									<li className="navbarli">Home</li>;
+									<Link to="/">
+										<li className="navbarli">Home</li>
+									</Link>
+									;
 									<Link to="/details">
 										<li className="navbarli">Details</li>
 									</Link>
