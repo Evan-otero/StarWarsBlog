@@ -22,6 +22,7 @@ body{
     position: fixed;
     top: 0px;
     width: 100%;
+    z-index: 1;
 }
 
 .headertop{
@@ -100,7 +101,7 @@ body{
 .content{
     position: relative;
     top: 250px;
-    z-index: -1;
+
 }
 
 .browsedatabank{
