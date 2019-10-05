@@ -17,7 +17,7 @@ export const Card = props => {
 						<br />
 						{props.echo}
 					</h5>
-					<Link to={`/details/${props.whiskey}`}>
+					<Link to={`/details${props.whiskey}`}>
 						<button>Details</button>
 					</Link>
 				</div>

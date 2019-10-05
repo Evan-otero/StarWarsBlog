@@ -38,7 +38,6 @@ export class Home extends React.Component {
 			})
 			.then(data => {
 				this.setState({ juliet: data.results });
-				console.log(this.state.juliet);
 			});
 	}
 
@@ -74,10 +73,10 @@ export class Home extends React.Component {
 									})}
 								</div>
 								<div className="row">
-									{this.state.delta.map((kilo, lima) => {
+									{this.state.juliet.map((kilo, lima) => {
 										return (
 											<Card
-												echo={this.state.juliet.name}
+												echo={kilo.name}
 												november="Name:"
 												key={lima}
 												whiskey={kilo.url.slice(20, kilo.url.length)}
