@@ -28,8 +28,8 @@ export const Layout = () => {
 						<Route exact path="/" component={Home} />
 						<Route path="/demo" component={Demo} />
 						<Route path="/single/:theid" component={Single} />
-						<Route path="/details/planets/:theid" component={DetailsPlanets} />
-						<Route path="/details/people/:theid" component={DetailsCharacters} />
+						<Route path="/details/:thename/:theid" component={Details} />
+
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />
