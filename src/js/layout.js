@@ -10,8 +10,8 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Details } from "./views/Details.js";
-import { DetailsPlanets } from "./views/DetailsPlanets.js";
-import { DetailsCharacters } from "./views/DetailsCharacters.js";
+import { DetailsPlanets } from "./component/DetailsPlanets.js";
+import { DetailsCharacters } from "./component/DetailsCharacters.js";
 
 //create your first component
 export const Layout = () => {

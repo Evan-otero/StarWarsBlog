@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Proptypes from "prop-types";
+import { DetailsPlanets } from "../component/DetailsPlanets.js";
+import { DetailsCharacters } from "../component/DetailsCharacters.js";
 
 import { Consumer } from "../store/appContext";
 
@@ -39,38 +41,17 @@ export class Details extends React.Component {
 	}
 	render() {
 		let echo = this.state.charlie;
-		console.log(echo);
-		console.log(this.state.bravo[this.state.delta - 2]);
+		console.log("echo", echo);
+		let index = this.state.alpha.findIndex(item => item.name === this.state.delta);
+		console.log("index", index);
+		let bindex = this.state.bravo.findIndex(item => item.name === this.state.delta);
+		console.log("bindex", bindex);
+		//console.log("####", this.state.bravo[this.state.delta - 2]);
+		console.log(this.state.bravo[bindex]);
 		if ((echo = "planets")) {
-			return (
-				<div className="container details">
-					<div className="row detailscontent">
-						<div className="col-md-6">
-							<img
-								id="detailsimg"
-								src="https://lumiere-a.akamaihd.net/v1/images/databank_abafar_01_169_475b5d42.jpeg?region=0%2C0%2C1560%2C878"
-							/>
-						</div>
-						<div className="col-md-6 detailstext">
-							Name: <br />
-							Rotation Period:
-							<br />
-							Oribtital Period:
-							<br />
-							Diameter:
-							<br />
-							Climate:
-							<br />
-							Gravity
-							<br />
-							Population
-							<br />
-							Residents
-							<br />
-						</div>
-					</div>
-				</div>
-			);
+			return this.state.bravo.map((kilo, lima) => {
+				return <DetailsPlanets key={lima} foxtrot={kilo.name} />;
+			});
 		} else if ((echo = "people")) {
 			return (
 				<div className="container details">

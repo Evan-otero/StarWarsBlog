@@ -6,8 +6,8 @@ import { InfoNav } from "../component/Infonav.js";
 import { Card } from "../component/Card.js";
 import { Details } from "../views/Details.js";
 import { Link } from "react-router-dom";
-import { DetailsPlanets } from "../views/DetailsPlanets.js";
-import { DetailsCharacters } from "../views/DetailsCharacters.js";
+import { DetailsPlanets } from "../component/DetailsPlanets.js";
+import { DetailsCharacters } from "../component/DetailsCharacters.js";
 
 export class Home extends React.Component {
 	constructor() {
@@ -63,25 +63,13 @@ export class Home extends React.Component {
 								<div className="row">
 									{this.state.delta.map((foxtrot, golf) => {
 										return (
-											<Card
-												echo={foxtrot.name}
-												november="Name:"
-												key={golf}
-												whiskey={foxtrot.url.slice(20, foxtrot.url.length)}
-											/>
+											<Card echo={foxtrot.name} november="Name:" key={golf} whiskey="people" />
 										);
 									})}
 								</div>
 								<div className="row">
 									{this.state.juliet.map((kilo, lima) => {
-										return (
-											<Card
-												echo={kilo.name}
-												november="Name:"
-												key={lima}
-												whiskey={kilo.url.slice(20, kilo.url.length)}
-											/>
-										);
+										return <Card echo={kilo.name} november="Name:" key={lima} whiskey="planets" />;
 									})}
 								</div>
 							</div>

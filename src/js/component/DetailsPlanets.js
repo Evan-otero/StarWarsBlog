@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Proptypes from "prop-types";
 
 import { Consumer } from "../store/appContext";
 
 import "../../styles/demo.scss";
 
-export const DetailsCharacters = () => (
+export const DetailsPlanets = () => (
 	<div className="container details">
 		<div className="row detailscontent">
 			<div className="col-md-6">
@@ -15,11 +16,25 @@ export const DetailsCharacters = () => (
 				/>
 			</div>
 			<div className="col-md-6 detailstext">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin risus orci, tristique in auctor nec,
-				consequat a metus. Nunc nisi magna, faucibus eu euismod nec, ultrices in ex. Integer eget feugiat
-				tellus. Nulla ex elit, commodo id pulvinar at, sollicitudin et eros. Sed lobortis risus non arcu
-				sodales, posuere elementum tortor elementum. Nunc
+				Name: <br />
+				Rotation Period: {props.foxtrot}
+				<br />
+				Oribtital Period:
+				<br />
+				Diameter:
+				<br />
+				Climate:
+				<br />
+				Gravity
+				<br />
+				Population
+				<br />
+				Residents
+				<br />
 			</div>
 		</div>
 	</div>
 );
+DetailsPlanets.propTypes = {
+	foxtrot: Proptypes.string
+};
