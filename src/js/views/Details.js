@@ -38,36 +38,59 @@ export class Details extends React.Component {
 			});
 	}
 	render() {
-		console.log(this.state.match);
-		return (
-			<div className="container details">
-				<div className="row detailscontent">
-					<div className="col-md-6">
-						<img
-							id="detailsimg"
-							src="https://lumiere-a.akamaihd.net/v1/images/databank_abafar_01_169_475b5d42.jpeg?region=0%2C0%2C1560%2C878"
-						/>
-					</div>
-					<div className="col-md-6 detailstext">
-						Name: <br />
-						Rotation Period:
-						<br />
-						Oribtital Period:
-						<br />
-						Diameter:
-						<br />
-						Climate:
-						<br />
-						Gravity
-						<br />
-						Population
-						<br />
-						Residents
-						<br />
+		let echo = this.state.charlie;
+		console.log(echo);
+		console.log(this.state.bravo[this.state.delta - 2]);
+		if ((echo = "planets")) {
+			return (
+				<div className="container details">
+					<div className="row detailscontent">
+						<div className="col-md-6">
+							<img
+								id="detailsimg"
+								src="https://lumiere-a.akamaihd.net/v1/images/databank_abafar_01_169_475b5d42.jpeg?region=0%2C0%2C1560%2C878"
+							/>
+						</div>
+						<div className="col-md-6 detailstext">
+							Name: <br />
+							Rotation Period:
+							<br />
+							Oribtital Period:
+							<br />
+							Diameter:
+							<br />
+							Climate:
+							<br />
+							Gravity
+							<br />
+							Population
+							<br />
+							Residents
+							<br />
+						</div>
 					</div>
 				</div>
-			</div>
-		);
+			);
+		} else if ((echo = "people")) {
+			return (
+				<div className="container details">
+					<div className="row detailscontent">
+						<div className="col-md-6">
+							<img
+								id="detailsimg"
+								src="https://lumiere-a.akamaihd.net/v1/images/databank_abafar_01_169_475b5d42.jpeg?region=0%2C0%2C1560%2C878"
+							/>
+						</div>
+						<div className="col-md-6 detailstext">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin risus orci, tristique in
+							auctor nec, consequat a metus. Nunc nisi magna, faucibus eu euismod nec, ultrices in ex.
+							Integer eget feugiat tellus. Nulla ex elit, commodo id pulvinar at, sollicitudin et eros.
+							Sed lobortis risus non arcu sodales, posuere elementum tortor elementum. Nunc
+						</div>
+					</div>
+				</div>
+			);
+		}
 	}
 }
 Details.propTypes = {
