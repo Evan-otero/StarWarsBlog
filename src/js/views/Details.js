@@ -20,33 +20,38 @@ export class Details extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch("https://swapi.co/api/people/")
-			.then(resp => {
-				if (resp.ok) {
-					return resp.json();
-				}
-			})
-			.then(data => {
-				this.setState({ alpha: data.results });
-			});
-		fetch("https://swapi.co/api/planets/")
-			.then(resp => {
-				if (resp.ok) {
-					return resp.json();
-				}
-			})
-			.then(data => {
-				this.setState({ bravo: data.results });
-			});
+		if (this.state.charlie === "people") {
+			fetch("https://swapi.co/api/people/${this.state.delta}")
+				.then(resp => {
+					if (resp.ok) {
+						return resp.json();
+					}
+				})
+				.then(data => {
+					this.setState({ alpha: [data] });
+				});
+		} else if (this.state.charlie === "planets") {
+			fetch("https://swapi.co/api/planets/${this.state.delta")
+				.then(resp => {
+					if (resp.ok) {
+						return resp.json();
+					}
+				})
+				.then(data => {
+					this.setState({ bravo: [data] });
+				});
+		}
 	}
 	render() {
 		let echo = this.state.charlie;
 		console.log("echo", echo);
-		let index = this.state.alpha.findIndex(item => item.name === this.state.delta);
-		console.log("index", index);
-		let bindex = this.state.bravo.findIndex(item => item.name === this.state.delta);
-		console.log("bindex", bindex);
-		console.log(this.state.bravo[bindex]);
+		console.log(this.state.alpha);
+		console.log(this.state.alpha.name);
+		//let index = this.state.alpha.findIndex(item => item.name === this.state.delta);
+		//console.log("index", index);
+		//let bindex = this.state.bravo.findIndex(item => item.name === this.state.delta);
+		//console.log("bindex", bindex);
+		//console.log(this.state.bravo[bindex]);
 		if (echo == "planets") {
 			return <DetailsPlanets />;
 		} else if (echo == "people") {

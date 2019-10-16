@@ -50,17 +50,17 @@ export class Navbar extends React.Component {
 									<li className="navbarli">
 										<div className="dropdown">
 											<button
-												className="btn btn-secondary dropdown-toggle"
+												className="btn btn-secondaNamery dropdown-toggle"
 												type="button"
 												id="dropdownMenuButton"
 												data-toggle="dropdown"
 												aria-haspopup="true"
 												aria-expanded="false">
-												Favorites
+												Dropdown button
 											</button>
 											<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 												<a className="dropdown-item" href="#">
-													Action
+													ActionName
 												</a>
 												<a className="dropdown-item" href="#">
 													Another action

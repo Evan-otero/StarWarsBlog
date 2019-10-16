@@ -14,9 +14,7 @@ export class Home extends React.Component {
 		super();
 		this.state = {
 			delta: [],
-			juliet: [],
-			romeo: [],
-			umbrella: "https://swapi.co/api/planets/2/"
+			juliet: []
 		};
 	}
 
@@ -40,10 +38,6 @@ export class Home extends React.Component {
 				this.setState({ juliet: data.results });
 			});
 	}
-
-	quebec = () => {
-		let temp = this.state.romeo;
-	};
 
 	render() {
 		return (
