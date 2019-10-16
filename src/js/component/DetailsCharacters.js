@@ -6,7 +6,7 @@ import { Consumer } from "../store/appContext";
 
 import "../../styles/demo.scss";
 
-export const DetailsCharacters = () => (
+export const DetailsCharacters = props => (
 	<div className="container details">
 		<div className="row detailscontent">
 			<div className="col-md-6">

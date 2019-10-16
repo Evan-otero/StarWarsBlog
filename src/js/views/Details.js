@@ -46,31 +46,11 @@ export class Details extends React.Component {
 		console.log("index", index);
 		let bindex = this.state.bravo.findIndex(item => item.name === this.state.delta);
 		console.log("bindex", bindex);
-		//console.log("####", this.state.bravo[this.state.delta - 2]);
 		console.log(this.state.bravo[bindex]);
-		if ((echo = "planets")) {
-			return this.state.bravo.map((kilo, lima) => {
-				return <DetailsPlanets key={lima} foxtrot={kilo.name} />;
-			});
-		} else if ((echo = "people")) {
-			return (
-				<div className="container details">
-					<div className="row detailscontent">
-						<div className="col-md-6">
-							<img
-								id="detailsimg"
-								src="https://lumiere-a.akamaihd.net/v1/images/databank_abafar_01_169_475b5d42.jpeg?region=0%2C0%2C1560%2C878"
-							/>
-						</div>
-						<div className="col-md-6 detailstext">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin risus orci, tristique in
-							auctor nec, consequat a metus. Nunc nisi magna, faucibus eu euismod nec, ultrices in ex.
-							Integer eget feugiat tellus. Nulla ex elit, commodo id pulvinar at, sollicitudin et eros.
-							Sed lobortis risus non arcu sodales, posuere elementum tortor elementum. Nunc
-						</div>
-					</div>
-				</div>
-			);
+		if (echo == "planets") {
+			return <DetailsPlanets />;
+		} else if (echo == "people") {
+			return <DetailsCharacters />;
 		}
 	}
 }
