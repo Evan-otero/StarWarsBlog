@@ -39,6 +39,15 @@ export class Home extends React.Component {
 			});
 	}
 
+	findid = xray => {
+		let temp2 = [];
+		let temp = xray;
+		for (let i = temp.length; (i = "/"); i--) {
+			temp2.unshift(temp[i]);
+		}
+		return temp;
+	};
+
 	render() {
 		return (
 			<div>
@@ -57,13 +66,27 @@ export class Home extends React.Component {
 								<div className="row">
 									{this.state.delta.map((foxtrot, golf) => {
 										return (
-											<Card echo={foxtrot.name} november="Name:" key={golf} whiskey="people" />
+											<Card
+												echo={foxtrot.name}
+												november="Name:"
+												key={golf}
+												whiskey="people"
+												yankee={this.findid(foxtrot.url)}
+											/>
 										);
 									})}
 								</div>
 								<div className="row">
 									{this.state.juliet.map((kilo, lima) => {
-										return <Card echo={kilo.name} november="Name:" key={lima} whiskey="planets" />;
+										return (
+											<Card
+												echo={kilo.name}
+												november="Name:"
+												key={lima}
+												whiskey="planets"
+												yankee={this.findid(kilo.url)}
+											/>
+										);
 									})}
 								</div>
 							</div>

@@ -21,7 +21,7 @@ export class Details extends React.Component {
 
 	componentDidMount() {
 		if (this.state.charlie === "people") {
-			fetch("https://swapi.co/api/people/${this.state.delta}")
+			fetch("https://swapi.co/api/people/" + this.state.delta)
 				.then(resp => {
 					if (resp.ok) {
 						return resp.json();
@@ -46,7 +46,7 @@ export class Details extends React.Component {
 		let echo = this.state.charlie;
 		console.log("echo", echo);
 		console.log(this.state.alpha);
-		console.log(this.state.alpha.name);
+		//console.log(this.state.alpha);
 		//let index = this.state.alpha.findIndex(item => item.name === this.state.delta);
 		//console.log("index", index);
 		//let bindex = this.state.bravo.findIndex(item => item.name === this.state.delta);

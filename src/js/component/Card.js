@@ -17,7 +17,7 @@ export const Card = props => {
 						<br />
 						{props.echo}
 					</h5>
-					<Link to={`/details/${props.whiskey}/${props.echo}/`}>
+					<Link to={`/details/${props.whiskey}/${props.yankee}/`}>
 						<button>Details</button>
 					</Link>
 				</div>
@@ -31,5 +31,6 @@ Card.propTypes = {
 	november: Proptypes.string,
 	oscar: Proptypes.string,
 	papa: Proptypes.string,
-	whiskey: Proptypes.string
+	whiskey: Proptypes.string,
+	yankee: Proptypes.string
 };
