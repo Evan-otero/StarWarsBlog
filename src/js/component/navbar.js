@@ -47,29 +47,9 @@ export class Navbar extends React.Component {
 										<li className="navbarli">Details</li>
 									</Link>
 									;
-									<li className="navbarli">
-										<div className="dropdown">
-											<button
-												className="btn btn-secondaNamery dropdown-toggle"
-												type="button"
-												id="dropdownMenuButton"
-												data-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false">
-												Dropdown button
-											</button>
-											<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-												<a className="dropdown-item" href="#">
-													ActionName
-												</a>
-												<a className="dropdown-item" href="#">
-													Another action
-												</a>
-												<a className="dropdown-item" href="#">
-													Something else here
-												</a>
-											</div>
-										</div>
+									<li className="navbarli dropdown">
+                                    <button onClick=""/>
+										Favorites
 									</li>
 									;<li className="navbarli">Series</li>;<li className="navbarli">Interactive</li>;
 									<li className="navbarli">Community</li>;<li className="navbarli">Databank</li>;

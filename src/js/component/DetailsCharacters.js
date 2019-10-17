@@ -19,9 +19,9 @@ export const DetailsCharacters = props => (
 				Name: {props.mike} <br />
 				Height: {props.india}
 				<br />
-				Mass {props.juliet}
+				Mass: {props.juliet}
 				<br />
-				Birth Year {props.kilo}
+				Birth Year: {props.kilo}
 				<br />
 			</div>
 		</div>
