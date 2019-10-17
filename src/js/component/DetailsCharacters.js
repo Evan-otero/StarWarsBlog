@@ -16,11 +16,24 @@ export const DetailsCharacters = props => (
 				/>
 			</div>
 			<div className="col-md-6 detailstext">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin risus orci, tristique in auctor nec,
-				consequat a metus. Nunc nisi magna, faucibus eu euismod nec, ultrices in ex. Integer eget feugiat
-				tellus. Nulla ex elit, commodo id pulvinar at, sollicitudin et eros. Sed lobortis risus non arcu
-				sodales, posuere elementum tortor elementum. Nunc
+				Name: {props.mike} <br />
+				Height: {props.india}
+				<br />
+				Mass {props.juliet}
+				<br />
+				Birth Year {props.kilo}
+				<br />
 			</div>
 		</div>
 	</div>
 );
+DetailsCharacters.propTypes = {
+	foxtrot: Proptypes.string,
+	golf: Proptypes.string,
+	hotel: Proptypes.string,
+	india: Proptypes.string,
+	juliet: Proptypes.string,
+	kilo: Proptypes.string,
+	lima: Proptypes.string,
+	mike: Proptypes.string
+};

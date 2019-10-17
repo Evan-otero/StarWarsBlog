@@ -39,15 +39,6 @@ export class Home extends React.Component {
 			});
 	}
 
-	findid = xray => {
-		let temp2 = [];
-		let temp = xray;
-		for (let i = temp.length; (i = "/"); i--) {
-			temp2.unshift(temp[i]);
-		}
-		return temp;
-	};
-
 	render() {
 		return (
 			<div>
@@ -71,7 +62,7 @@ export class Home extends React.Component {
 												november="Name:"
 												key={golf}
 												whiskey="people"
-												yankee={this.findid(foxtrot.url)}
+												yankee={foxtrot.url.slice(28, foxtrot.url.length - 1)}
 											/>
 										);
 									})}
@@ -84,7 +75,7 @@ export class Home extends React.Component {
 												november="Name:"
 												key={lima}
 												whiskey="planets"
-												yankee={this.findid(kilo.url)}
+												yankee={kilo.url.slice(29, kilo.url.length - 1)}
 											/>
 										);
 									})}

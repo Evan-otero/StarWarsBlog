@@ -28,17 +28,17 @@ export class Details extends React.Component {
 					}
 				})
 				.then(data => {
-					this.setState({ alpha: [data] });
+					this.setState({ alpha: data });
 				});
 		} else if (this.state.charlie === "planets") {
-			fetch("https://swapi.co/api/planets/${this.state.delta")
+			fetch("https://swapi.co/api/planets/" + this.state.delta)
 				.then(resp => {
 					if (resp.ok) {
 						return resp.json();
 					}
 				})
 				.then(data => {
-					this.setState({ bravo: [data] });
+					this.setState({ bravo: data });
 				});
 		}
 	}
@@ -46,6 +46,9 @@ export class Details extends React.Component {
 		let echo = this.state.charlie;
 		console.log("echo", echo);
 		console.log(this.state.alpha);
+		console.log(this.state.bravo);
+		console.log(this.state.alpha.name);
+		console.log(this.state.bravo.name);
 		//console.log(this.state.alpha);
 		//let index = this.state.alpha.findIndex(item => item.name === this.state.delta);
 		//console.log("index", index);
@@ -53,9 +56,23 @@ export class Details extends React.Component {
 		//console.log("bindex", bindex);
 		//console.log(this.state.bravo[bindex]);
 		if (echo == "planets") {
-			return <DetailsPlanets />;
+			return (
+				<DetailsPlanets
+					mike={this.state.bravo.name}
+					india={this.state.bravo.climate}
+					juliet={this.state.bravo.gravity}
+					kilo={this.state.bravo.population}
+				/>
+			);
 		} else if (echo == "people") {
-			return <DetailsCharacters />;
+			return (
+				<DetailsCharacters
+					mike={this.state.alpha.name}
+					india={this.state.alpha.height}
+					juliet={this.state.alpha.mass}
+					kilo={this.state.alpha.birth_year}
+				/>
+			);
 		}
 	}
 }

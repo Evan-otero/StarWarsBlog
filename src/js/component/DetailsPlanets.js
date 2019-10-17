@@ -16,25 +16,24 @@ export const DetailsPlanets = props => (
 				/>
 			</div>
 			<div className="col-md-6 detailstext">
-				Name: <br />
-				Rotation Period: {props.foxtrot}
+				Name: {props.mike} <br />
+				Climate: {props.india}
 				<br />
-				Oribtital Period:
+				Gravity {props.juliet}
 				<br />
-				Diameter:
-				<br />
-				Climate:
-				<br />
-				Gravity
-				<br />
-				Population
-				<br />
-				Residents
+				Population {props.kilo}
 				<br />
 			</div>
 		</div>
 	</div>
 );
 DetailsPlanets.propTypes = {
-	foxtrot: Proptypes.string
+	foxtrot: Proptypes.string,
+	golf: Proptypes.string,
+	hotel: Proptypes.string,
+	india: Proptypes.string,
+	juliet: Proptypes.string,
+	kilo: Proptypes.string,
+	lima: Proptypes.string,
+	mike: Proptypes.string
 };
